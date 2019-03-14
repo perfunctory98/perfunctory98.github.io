@@ -25,7 +25,7 @@
     month: 03,
     day: 12
   };
-  alert(startTime);
+
 
   isNaN(startTime.year) && (startTime.year = 2018);
   isNaN(startTime.month) && (startTime.month = 2);
