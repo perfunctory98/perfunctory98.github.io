@@ -1,4 +1,4 @@
-(() => {
+
   function update(id = '', start = {}) {
     const dom = document.querySelector(id);
     const ts = new Date(start.year, start.month - 1, start.day).getTime();
@@ -20,13 +20,12 @@
     };
   }
 
-  const { start_time } = window.AD_CONFIG;
-  const [startYear, startMonth, startDay] = start_time.split('-');
   const startTime = {
-    year: parseInt(startYear, 10),
-    month: parseInt(startMonth, 10),
-    day: parseInt(startDay, 10)
+    year: 2019,
+    month: 03,
+    day: 12
   };
+  alert(startTime);
 
   isNaN(startTime.year) && (startTime.year = 2018);
   isNaN(startTime.month) && (startTime.month = 2);
@@ -35,4 +34,3 @@
   const timeUpdate = update('#site-time', startTime);
   timeUpdate();
   setInterval(timeUpdate, 1000);
-})();
